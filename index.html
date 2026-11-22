@@ -606,8 +606,8 @@ footer{background:#FFFFFF;border-top:1px solid rgba(186,167,161,.2);padding:56px
 }
 
 
-#servicos .grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin:0 auto;gap:22px}
-@media(max-width:700px){#servicos .grid{grid-template-columns:1fr}}
+
+@media(max-width:700px){}
 
 /* contact mobile center */
 @media(max-width:900px){
@@ -649,10 +649,10 @@ footer{background:#FFFFFF;border-top:1px solid rgba(186,167,161,.2);padding:56px
   .social{justify-content:center}
 }
 
-#servicos .grid{justify-items:center}
+
 #servicos .svc{width:100%}
 @media(max-width:700px){
-  #servicos .grid{grid-template-columns:1fr;justify-items:center}
+  
   #servicos .sec-head{text-align:center}
 }
 
@@ -662,16 +662,46 @@ footer{background:#FFFFFF;border-top:1px solid rgba(186,167,161,.2);padding:56px
 .diff .n{flex:0 0 auto}
 .diff p{flex:1 1 auto;margin:0}
 
-#servicos .grid{align-items:stretch;justify-items:stretch}
+
 #servicos .svc{height:100%;max-width:none}
 #servicos .svc h3{flex:0 0 auto}
 #servicos .svc p{flex:1 1 auto;margin:0}
 
 @media(max-width:700px){
-  #servicos .grid{grid-template-columns:1fr;justify-items:center}
+  
   #servicos .svc{max-width:400px;width:100%}
   .diff-grid{grid-template-columns:1fr;max-width:400px;justify-items:center}
   .diff{max-width:400px;width:100%}
+}
+
+
+/* Services grid - mobile first */
+#servicos .grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+  max-width:420px;
+  margin:0 auto;
+  justify-items:center;
+  align-items:stretch;
+}
+#servicos .svc{
+  width:100%;
+  max-width:400px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+#servicos .sec-head{text-align:center}
+@media(min-width:701px){
+  #servicos .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    max-width:820px;
+    gap:22px;
+  }
+  #servicos .svc{max-width:none}
 }
 
 </style>
@@ -816,7 +846,7 @@ Tirar dúvidas
 <h2>Especialistas em unhas</h2>
 <p>Técnicas modernas de esmaltação, alongamento e cuidados para unhas impecáveis. Agende pelo WhatsApp.</p>
 </div>
-<div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin:0 auto;gap:22px;align-items:stretch">
+<div class="grid">
 <article class="svc reveal">
 <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v3H9z"/><path d="M8 6h8l-1 4H9L8 6z"/><rect x="7" y="10" width="10" height="11" rx="2"/><path d="M10 14h4M10 17h4"/></svg></div>
 <h3>Esmaltação em Gel</h3>
